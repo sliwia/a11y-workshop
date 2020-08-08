@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-EN">
+<head>
+  <meta charset="UTF-8">
+  <title>A11y workshop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Accessibility workshop</h1>
+  </header>
+
+  <nav>
+    <a href="index.html" >FAKE MENU | </a>
+    <a href="index.html">PROBABLY STILL FIXABLE | </a>
+    <a href="index.html" >OH LOOK A SEARCH BOX | </a>
+  </nav>
+  
+  <main>
+    <section class="search-form">
+
+      <form>
+        <label for="search">Search: </label>
+        <input id="search" type="text" value="Search me!!" aria-label="Search - enter value"> 
+        <button>🔎</button>
+      </form>
+
+    </section>
+
+    <section class="goals-and-requirements">
+      
+      <h1>Workshop objective</h1>
+
+      <p id="short-desc">Your objective is to eliminate as many accessibility issues on this website as possible.</p>
+
+      <h2>To proceed with the workshop you will need:</h2>
+      <ol>
+        <li>web browser</li>
+        <li>screen reader:
+          <ul>
+            <li>for Windows:: <a href="https://www.nvaccess.org/download/" target="_blank">NVDA</a><br></li>
+            <li>for MacOS: VoiceOver (built-in)</li>
+            <li>for any OS with Chrome browser: <a href="https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en" target="_blank">ChromeVox</a></li>
+          </ul>
+        </li>
+        <li>Axe test framework; you can choose one from:
+          <ul>
+            <li><a href="https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/" target="_blank">extension for Firefox</a></li>
+            <li><a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US" target="_blank">extension for Chrome - requires the website being run in a webserver</a></li>
+            <li><a href="https://github.com/dequelabs/axe-cli" target="_blank">Axe CLI - for use in command line, requires the website being run in a webserver</a></li>
+            <li><a href="https://github.com/dequelabs/axe-core" target="_blank">Axe Core - version for bundling as website script, has to be used with a test framework</a></li>
+          </ul>
+        </li>
+      </ol>
+
+      <p>A few words on software choice.</p>
+
+      <p>There's a screen reader for Linux called Orca, but using it has a bit high learning curve for this workshop and doesn't have an option to show the text for debugging instead of reading it out. ChromeVox extension can be used instead, but keep in mind that it only works in Chrome - not in Chromium! If you are using Linux and don't want to install Chrome, skip the screen reader step.</p>
+
+      <p>Conversely, Axe for Firefox can be used on local files, in Chrome you will have to set up a webserver or publish the website somewhere (if you want to - the most convenient way we've found was to put the files on <a href="http://glitch.com" target="_blank">glitch.com</a>).</p>
+
+      <h2>Some basic guidelines:</h2>
+
+      <ol>
+        <li>Keep notes of your findings and how you fixed them (even if you didn't fix them - note them)</li>
+        <li>Try to navigate the website with the screen reader and notice how the content is structured in a content navigator / rotor</li>
+        <li>Check how this site responds to navigating with a keyboard</li>
+        <li>Run the Axe against it to see if there are any issues and try to remove them</li>
+        <li>If you notice any other issues - feel free to remove those as well.</li>
+      </ol>
+
+    </section>
+
+    <section class="additional-tasks">
+
+      <h1>Below are some components you may or may not have to fix</h2>
+
+      <img alt='Picture with beautiful cat' src="http://placekitten.com/500/300"><br />
+    
+      <button>This is a button</button> <button>And this is a button</button>
+
+      <form>
+        <label for="first-name">First name:</label>
+        <input id="first-name" type="text"><br>
+        <label for="surname">Surname:</label>
+        <input id="surname" type="text"><br>
+        <input id="agrement-checkbox" type="checkbox" >
+        <label for="agrement-checkbox">It doesn't send anything anywhere but please still confirm you're ok with that</label><br><br>
+        <button>Submit</button>
+      </form>
+
+    </section>
+  </main>
+</body>
+</html>

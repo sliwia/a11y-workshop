@@ -1,0 +1,26 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #fffef2;
+}
+
+a:focus {
+    color: #032a36;
+}
+
+a {
+    color:#026682;
+    text-decoration: none;
+}
+
+input, button {
+    border: 1px solid #026682;
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.5);
+    background-color: lightgrey;
+    margin: 7px;
+    padding: 7px;
+    color: #0635ae;
+    cursor: default;
+}
